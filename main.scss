@@ -1,0 +1,102 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+body {
+    background-color: #f9fcfc;
+    display: grid;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+}
+
+header {
+    height: 115px;
+}
+
+.mode,
+.menu {
+    svg {
+        width: 17px;
+    }
+}
+
+.res {
+    text-align: right;
+    padding: 0 15px;
+    .top--res {
+        font-size: 14px;
+        opacity: .4;
+        padding: 10px 0;
+    }
+    .main--res {
+        font-size: 35px;
+        display: block;
+        margin: 15px 0 40px;
+        font-weight: 500;
+    }
+}
+
+.header--icons {
+    display: grid;
+    grid-auto-flow: column;
+    svg {
+        width: 20px;
+        max-height: 13px;
+    }
+}
+
+.calc--body {
+    background-color: #ffffff;
+    box-shadow: 11px 18px 34px 1px #00000005;
+    border-radius: 35px;
+    min-width: 310px;
+    padding: 10px;
+    &::after {
+        content: '';
+        width: 90px;
+        height: 4px;
+        border-radius: 10px;
+        margin: 10px auto;
+        display: block;
+        background-color: #dadada;
+    }
+}
+
+h1 {
+    font-size: 16px;
+}
+
+.time {
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.noti {
+    display: flex;
+    justify-content: space-between;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    align-items: center;
+    padding: 0 12px 15px;
+}
+
+.btns {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    >div {
+        min-height: 60px;
+        font-size: 22px;
+    }
+}
