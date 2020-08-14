@@ -36,6 +36,7 @@ header {
 
 .res .top--res {
   font-size: 14px;
+  min-height: 36px;
   opacity: .4;
   padding: 10px 0;
 }
@@ -43,6 +44,7 @@ header {
 .res .main--res {
   font-size: 35px;
   display: block;
+  min-height: 40px;
   margin: 15px 0 40px;
   font-weight: 500;
 }
@@ -126,5 +128,22 @@ nav {
 .btns > div {
   min-height: 60px;
   font-size: 22px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+
+.btns > div:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 /*# sourceMappingURL=main.css.map */
