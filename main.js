@@ -5,11 +5,10 @@ const mainRes = document.querySelector(".main--res")
 const timeDiv = document.querySelector(".time")
 
 // get the time 
-var d = new Date("2011-04-20T09:30:51.01");
+let d = new Date("2011-04-20T09:30:51.01");
 
 let time = `${d.getHours()}:${d.getMinutes()}`
 timeDiv.innerHTML = time
-
 const combine = (one, two, obr) => {
     one = parseInt(one);
     two = parseInt(two);
@@ -23,11 +22,7 @@ const combine = (one, two, obr) => {
     if (obr == "*") {
         return one * two
     }
-
 }
-
-
-
 $(".dat").click(function() {
     if ((this.classList.contains('num'))) {
         numOne = this.innerHTML;
@@ -45,8 +40,5 @@ $(".dat").click(function() {
             topRes.innerHTML = "";
         }
     }
-
-
     console.log(entryArray)
-
 })
