@@ -1,5 +1,5 @@
-let numOne = ""
-let numTwo = ""
+let valOne = ""
+    // let valTwo = ""
 const topRes = document.querySelector(".top--res")
 const mainRes = document.querySelector(".main--res")
 const timeDiv = document.querySelector(".time")
@@ -23,12 +23,16 @@ const combine = (one, two, obr) => {
         return one * two
     }
 }
+$(".clear").click(function() {
+    mainRes.innerHTML = "";
+    topRes.innerHTML = "";
+})
 $(".dat").click(function() {
     if ((this.classList.contains('num'))) {
-        numOne = this.innerHTML;
-        console.log(numOne);
-        topRes.innerHTML += numOne;
-        mainRes.innerHTML += numOne;
+        valOne = this.innerHTML;
+        // console.log(valOne);
+        topRes.innerHTML += valOne;
+        mainRes.innerHTML += valOne;
     } else {
         topRes.innerHTML += this.innerHTML;
         mainRes.innerHTML = "";
