@@ -54,10 +54,22 @@ $(".dat").click(function() {
         }
     }
     if ((this.classList.contains('opr'))) {
-        if (store.attr('opr')) {
+        if (
+            store.attr('opr') &&
+            store.attr("valOne")
+
+        ) {
+            console.log("if")
             let resAl = combine(store.attr("valOne"), store.attr("valTwo"), store.attr("opr"))
             mainRes.innerHTML = resAl
+            store.attr({
+                valOne: resAl,
+                valTwo: "",
+                opr: this.innerHTML
+            })
 
+        } else if (store.attr('opr') && store.attr('opr') == this.innerHTML) {
+            console.log("esleif")
         } else {
             store.attr('opr', this.innerHTML)
             mainRes.innerHTML = ""
@@ -65,7 +77,7 @@ $(".dat").click(function() {
 
     }
     if ((this.classList.contains('dat'))) {
-        console.log(this)
+        // console.log(this)
     }
     topRes.innerHTML = store.attr("valOne") + store.attr("opr") + store.attr("valTwo");
 })
