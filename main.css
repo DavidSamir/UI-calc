@@ -60,6 +60,11 @@ header {
   max-height: 13px;
 }
 
+.dis {
+  opacity: 0.5;
+  cursor: unset !important;
+}
+
 .calc--body {
   background-color: #ffffff;
   -webkit-box-shadow: 11px 18px 34px 1px #00000005;
@@ -140,10 +145,33 @@ nav {
   cursor: pointer;
   -webkit-transition: .3s ease-in-out;
   transition: .3s ease-in-out;
+  position: relative;
 }
 
-.btns > div:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+.btns > div::before {
+  content: "";
+  width: 0;
+  height: 0;
+  display: block;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  position: absolute;
+  background: #00000021;
+  border-radius: 500px;
+  z-index: -2;
+}
+
+.btns > div:not(.dis):hover {
+  color: #fff;
+  position: relative;
+  z-index: 2;
+}
+
+.btns > div:not(.dis):hover::before {
+  content: "";
+  background: #000000;
+  border-radius: 5px;
+  width: calc(100% - 20px);
+  height: calc(100% - 10px);
 }
 /*# sourceMappingURL=main.css.map */
