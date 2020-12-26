@@ -5,7 +5,7 @@ const mainRes = document.querySelector(".main--res")
 const timeDiv = document.querySelector(".time")
 
 // get the time 
-let d = new Date("2011-04-20T09:30:51.01");
+let d = new Date();
 
 let time = `${d.getHours()}:${d.getMinutes()}`
 timeDiv.innerHTML = time
