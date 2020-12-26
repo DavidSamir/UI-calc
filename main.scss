@@ -28,16 +28,21 @@ header {
 .res {
     text-align: right;
     padding: 0 15px;
+    overflow: hidden;
     .top--res {
         font-size: 14px;
         min-height: 36px;
         opacity: .4;
         padding: 10px 0;
+        max-width: 100%;
+        white-space: nowrap;
     }
     .main--res {
         font-size: 35px;
         display: block;
         min-height: 40px;
+        max-width: 100%;
+        white-space: nowrap;
         margin: 15px 0 40px;
         font-weight: 500;
     }
@@ -63,9 +68,10 @@ header {
     border-radius: 35px;
     min-width: 310px;
     padding: 10px;
-    &::after {
+    .btns::after {
         content: '';
         width: 90px;
+        grid-column: 1/5;
         height: 4px;
         border-radius: 10px;
         margin: 10px auto;
@@ -161,5 +167,10 @@ footer {
         width: 100%;
         height: 100%;
         display: grid;
+        min-width: 100vw !important;
+        max-width: 100vw !important;
+    }
+    .calc--body .btns::after {
+        margin-bottom: 35px;
     }
 }
