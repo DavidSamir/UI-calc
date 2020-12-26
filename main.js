@@ -18,19 +18,31 @@ let time = `${d.getHours()}:${d.getMinutes()}`
 timeDiv.innerHTML = time
 
 const combine = (one, two, obr) => {
-    one = parseInt(one);
-    two = parseInt(two);
-    obr == "+" && one + two;
-    if (obr == "+") {
-        return one + two
+        one = parseInt(one);
+        two = parseInt(two);
+        obr == "+" && one + two;
+        if (obr == "+") {
+            return one + two
+        }
+        if (obr == "-") {
+            return one - two
+        }
+        if (obr == "*") {
+            return one * two
+        }
     }
-    if (obr == "-") {
-        return one - two
+    // darkmode 
+$(".mode").click(() => {
+    if ($("html")[0].dataset.theme == "dark") {
+        $("html").attr("data-theme", "light")
+    } else {
+        $("html").attr("data-theme", "dark")
+
     }
-    if (obr == "*") {
-        return one * two
-    }
-}
+})
+
+
+
 
 // clear the data 
 $(".clear").click(function() {
@@ -78,6 +90,21 @@ $(".dat").click(function() {
     }
     if ((this.classList.contains('dat'))) {
         // console.log(this)
+    }
+    if ((this.classList.contains('res'))) {
+        if (
+            store.attr('opr') &&
+            store.attr("valOne") &&
+            store.attr("valTwo")
+        ) {
+            let resAl = combine(store.attr("valOne"), store.attr("valTwo"), store.attr("opr"))
+            mainRes.innerHTML = resAl
+            store.attr({
+                valOne: resAl,
+                valTwo: "",
+                opr: ""
+            })
+        }
     }
     topRes.innerHTML = store.attr("valOne") + store.attr("opr") + store.attr("valTwo");
 })
