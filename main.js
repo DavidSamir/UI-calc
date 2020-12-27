@@ -18,20 +18,21 @@ let time = `${d.getHours()}:${d.getMinutes()}`
 timeDiv.innerHTML = time
 
 const combine = (one, two, obr) => {
-        one = parseInt(one);
-        two = parseInt(two);
-        obr == "+" && one + two;
-        if (obr == "+") {
-            return one + two
-        }
-        if (obr == "-") {
-            return one - two
-        }
-        if (obr == "*") {
-            return one * two
-        }
+    one = parseInt(one);
+    two = parseInt(two);
+    obr == "+" && one + two;
+    if (obr == "+") {
+        return one + two
     }
-    // darkmode 
+    if (obr == "-") {
+        return one - two
+    }
+    if (obr == "*") {
+        return one * two
+    }
+}
+
+// darkmode 
 $(".mode").click(() => {
     if ($("html")[0].dataset.theme == "dark") {
         $("html").attr("data-theme", "light")
