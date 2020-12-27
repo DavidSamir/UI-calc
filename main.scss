@@ -47,6 +47,10 @@ header {
     }
 }
 
+.mode {
+    cursor: pointer;
+}
+
 .res {
     text-align: right;
     padding: 0 15px;
@@ -194,5 +198,11 @@ footer {
     }
     .calc--body .btns::after {
         margin-bottom: 35px;
+    }
+    footer {
+        position: unset;
+        bottom: 10px;
+        right: 10px;
+        text-align: center;
     }
 }
