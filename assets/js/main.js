@@ -30,6 +30,9 @@ const combine = (one, two, obr) => {
     if (obr == "*") {
         return one * two
     }
+    if (obr == "/") {
+        return one / two
+    }
 }
 
 // darkmode 
